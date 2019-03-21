@@ -5,6 +5,9 @@ public class People {
 	private String name;
 	private int age;
 	
+	public People() {
+		
+	}
 	public People(int id, String name, int age) {
 		super();
 		this.id = id;
@@ -28,6 +31,10 @@ public class People {
 	}
 	public void setAge(int age) {
 		this.age = age;
+	}
+	@Override
+	public String toString() {
+		return "People [id=" + id + ", name=" + name + ", age=" + age + "]";
 	}
 	
 
