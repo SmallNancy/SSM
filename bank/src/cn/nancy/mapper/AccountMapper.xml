@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="cn.nancy.mapper.AccountMapper" >
+  <select id="getAccPass" resultType="account" parameterType="account">
+    select * from account where accnumber=#{accnumber} and password=#{password}
+  </select>
+  <select id="getAccName" resultType="account" parameterType="account">
+    select * from account where accnumber=#{accnumber} and name=#{name}
+  </select>
+  <update id="updateBalance" parameterType="account">
+     update account set balance=balance+#{balance} where accnumber=#{accnumber}
+  </update>
+</mapper>
