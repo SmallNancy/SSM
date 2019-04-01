@@ -32,7 +32,6 @@ public class LogServiceImpl implements LogService{
 		pi.setPageNumber(pageNumber);
 		pi.setPageSize(pageSize);
 		pi.setTotal(count%pageSize==0?count/pageSize:count/pageSize+1);
-		System.out.println(pi+"------------------");
 		return pi;
 	}
 
