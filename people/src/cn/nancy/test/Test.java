@@ -17,6 +17,8 @@ public class Test {
   	InputStream is = Resources.getResourceAsStream("mybatis.xml");
   	SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(is);
   	SqlSession session = factory.openSession();
+//  	People p = session.selectOne("cn.nancy.pojo.People.getId");
+//  	System.out.println(p);
   	List<People> list =  session.selectList("cn.nancy.pojo.People.selectAll");
   	session.close();
 	}

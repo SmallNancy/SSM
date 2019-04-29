@@ -9,5 +9,8 @@
   <select id="getId" resultType="cn.nancy.pojo.People" parameterType="int">
     selecty * from people where id = #{0}
   </select>
+  <select id="page" resultType="cn.nancy.pojo.People" parameterType="map">
+     select * from people limit #{pageStart},#{pagesize}
+  </select>
   
 </mapper>
